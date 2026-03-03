@@ -2,13 +2,13 @@
   "name": "playone",
   "version": "1.0.0",
   "description": "A real-time web application built with WebSocket, Express, Node.js, Drizzle ORM, PostgreSQL, and Zod for schema validation.",
-  "main": "index.js",
+  "main": "src/server.js",
   "scripts": {
     "start": "node src/server.js",
-    "dev": "nodemon src/server.js",
+    "dev": "nodemon --watch src/server.js",
     "db:generate": "drizzle-kit generate",
     "db:migrate": "drizzle-kit migrate",
-    "db:run": "node src/db/index.js",
+    "db:run": "node src/db/db.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -19,7 +19,8 @@
     "dotenv": "^17.3.1",
     "drizzle-orm": "^0.45.1",
     "express": "^5.2.1",
-    "pg": "^8.19.0"
+    "pg": "^8.19.0",
+    "zod": "^4.3.6"
   },
   "repository": {
     "type": "git",
